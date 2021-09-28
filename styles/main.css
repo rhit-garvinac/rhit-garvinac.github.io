@@ -1,0 +1,150 @@
+:root{
+	--vertical-space: 2rem;
+	--horizontal-space: 3rem;
+	--light-color: #959595;
+	--dark-color: #3D3D3D;
+	--text-color: #FFFFFF;
+	--hyperlink-color: #0BE6DF;
+}
+
+body{
+	font-size: 18px;
+	line-height: 1.5;
+	font-family: 'Open Sans', sans-serif;
+	color: var(--text-color);
+	background-image: linear-gradient(45deg, rgb(30,65,117) 0%, rgb(30,65,117) 24%,rgb(112,112,163) 24%, 
+	rgb(112,112,163) 28%,rgb(79,124,166) 28%, rgb(79,124,166) 40%,rgb(47,136,170) 40%, 
+	rgb(47,136,170) 84%,rgb(138,147,247) 84%, rgb(138,147,247) 100%),linear-gradient(0deg, rgb(30,65,117) 0%, 
+	rgb(30,65,117) 24%,rgb(112,112,163) 24%, 
+	rgb(112,112,163) 28%,rgb(79,124,166) 28%, rgb(79,124,166) 40%,rgb(47,136,170) 40%, 
+	rgb(47,136,170) 84%,rgb(138,147,247) 84%, rgb(138,147,247) 100%),linear-gradient(135deg, rgb(30,65,117) 0%, 
+	rgb(30,65,117) 24%,rgb(112,112,163) 24%, rgb(112,112,163) 28%,rgb(79,124,166) 28%, rgb(79,124,166) 40%,rgb(47,136,170) 40%, 
+	rgb(47,136,170) 84%,rgb(138,147,247) 84%, rgb(138,147,247) 100%),linear-gradient(90deg, rgb(138,147,247),rgb(50,62,194)); 
+	background-blend-mode:overlay,overlay,overlay,normal;
+}
+
+h1, h2, h3{
+	line-height: 1.2;
+	color: var(--text-color);
+	font-family: 'Satisfy', cursive;
+}
+
+header, nav{
+	background-color: var(--dark-color);
+}
+
+a{
+	color: var(--text-color);
+}
+
+a:hover{
+	color: var(--hyperlink-color);
+}
+
+body#about img {
+	height: 15em;
+}
+
+p {
+	max-width: 50em;
+}
+
+body{
+	display: grid;
+	grid-template-areas: "head  nav"
+						 "main  main"
+						 "foot  foot";
+	grid-template-columns: 2fr 4fr;
+	grid-template-rows: auto 1fr auto;
+}
+
+body > *{
+	padding-left: var(--horizontal-space);
+	padding-right: var(--horizontal-space);
+}
+
+body > header{
+	grid-area: head;
+}
+body > nav{
+	grid-area: nav;
+	padding-top: 1em;
+}
+
+body > nav ul{
+	list-style-type: none;
+	padding: 0;
+}
+
+body > nav ul li{
+	display: inline;
+	padding-right: 1rem;
+}
+
+body > main{
+	grid-area: main;
+}
+
+body > footer{
+	grid-area: foot;
+}
+
+header, footer{
+	padding-top: var(--vertical-space);
+	padding-bottom: var(--vertical-space);
+}
+
+header h1,footer h1{
+	margin: 0;
+}
+
+body#portfolio ul#portfolioItems {
+	display: flex;
+	flex-wrap: wrap;
+	flex: 1;
+	list-style-type: none;
+	padding: 0;
+}
+
+@media screen and (min-width: 30em){
+	body#portfolio ul#portfolioItems li{
+		flex-basis: 48%;
+		padding-right: 2%;
+	}
+}
+
+body#portfolio ul#portfolioItems li img{
+	max-width: 100%;
+	width: 100%;
+	height: 50%;
+	object-fit: cover;
+}
+
+@media screen and (min-width: 30em){
+	body{
+		display: grid;
+		grid-template-areas: "head  nav"
+								"main  main"
+								"foot  foot";
+		grid-template-rows: auto 1fr auto;
+	}
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+main > div#scrollButton{
+	background-color: white;
+	color: black;
+	position: fixed;
+	text-align: center;
+	line-height: 2vw;
+	vertical-align: middle;
+	bottom: 2vw;
+	right: 2vw;
+	width: 2vw;
+	font-weight: 1000;
+	font-size: large;
+	border-radius: 2vw;
+}

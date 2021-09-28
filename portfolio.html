@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width-device-width, initial-scale-1"/>
+		<title></title>
+		<link rel="stylesheet" href="styles/normalize.css"/>
+		<link rel="stylesheet" href="styles/main.css"/>
+		<link rel="icon" href="images/favicon.png"/>
+		<style>
+			@import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
+		</style>
+		<style>
+			@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+		</style>
+	</head>
+	<body id="portfolio">
+		<header>
+			<h1>Campbell Garvin</h1>
+		</header>
+		<nav>
+			<ul>
+				<li><a href="index.html">About</a></li>
+				<li><a href="portfolio.html">Portfolio</a></li>
+				<li><a href="resume.html">Resume</a></li>
+			</ul>
+		</nav>
+		<main>
+			<h1>Portfolio</h1>
+				<ul id="portfolioItems">
+					<li>
+						<h2><a href="#">Gomoku</a></h2>
+						<img src="images/portfolio/item1.png">
+						<p> In my spare time when I was learning Java, I created an implementation of Gomoku, or Five-in-a-Row. I
+						used Java's built-in classes for drawing and animation to recreate this game. I think this game turned
+						out pretty good and it taught me a lot about the inner workings of Java.</p>
+					</li>
+					<li>
+						<h2><a href="#">Binary Assembly Decoder</a></h2>
+						<img src="images/portfolio/item2.png" id="datapath">
+						<p> The Binary Assembly Decoder is a MIPS-like processor that I created for my Computer Architecture class last
+						year. My largest contribution to the project was I was creating the assembler, which ran in Java and used a HashMap
+						to run in O(n^2) time. Overall, I think this project was a success and it is objectively my coolest project to date.</p>
+					</li>
+					<li>
+						<h2><a href="#">Map Making Software</a></h2>
+						<img src="images/portfolio/item3.png">
+						<p> I created the framework for a map-designing software. Users could place their own nodes and make connections
+						between the points as they saw fit. I plan to redesign it to make it more functional on smaller devices like
+						phones and tablets, and I plan to actually deploy it on the web.</p>
+					</li>
+					<li>
+						<h2><a href="#">Portfolio Website</a></h2>
+						<img src="images/portfolio/item4.png">
+						<p> I used HTML, CSS, and JavaScript to create the website you are reading right now!
+						I designed the website to outline my qualifications in a cohesive and convenient way.
+						Through this project I learned more about website design and deploying websites with Firebase.</p>
+					</li>
+				</ul>
+				<div onclick="topFunction()" id="scrollButton">^</div>
+		</main>
+		<footer>
+			<p>You can email me at garvinac@rose-hulman.edu</p>
+		</footer>
+		<script src="scripts/main.js"></script>
+	</body>
+</html>
