@@ -15,6 +15,7 @@ function topFunction() {
 function main(){
     btn = document.getElementById("scrollButton");
     btn = (event) => {
+        console.log("clicked");
         topFunction()
         };
     window.onscroll = function() {scrollFunction()};
